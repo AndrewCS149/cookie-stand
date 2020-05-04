@@ -6,13 +6,21 @@ var seattle = {
   maxCust: 65,
   avgCookies: 6.3,
 
-  customers: function() {
+  customersPerHr: function() {
     var min = this.minCust;
     var max = this.maxCust;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  cookiesPerHr: function() {
+    var customers = this.customersPerHr();
+
+    return `${customers} customers. ${customers * this.avgCookies} cookies`;
   }
 };
+
+console.log(seattle.cookiesPerHr());
 
 var tokyo = {
 
@@ -20,11 +28,17 @@ var tokyo = {
   maxCust: 24,
   avgCookies: 1.2,
 
-  customers: function() {
+  customersPerHr: function() {
     var min = this.minCust;
     var max = this.maxCust;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  cookiesPerHr: function() {
+    var customers = this.customersPerHr();
+
+    return `${customers} customers. ${customers * this.avgCookies} cookies`;
   }
 };
 
@@ -34,11 +48,17 @@ var dubai = {
   maxCust: 38,
   avgCookies: 3.7,
 
-  customers: function() {
+  customersPerHr: function() {
     var min = this.minCust;
     var max = this.maxCust;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  cookiesPerHr: function() {
+    var customers = this.customersPerHr();
+
+    return `${customers} customers. ${customers * this.avgCookies} cookies`;
   }
 };
 
@@ -48,11 +68,17 @@ var paris = {
   maxCust: 38,
   avgCookies: 2.3,
 
-  customers: function() {
+  customersPerHr: function() {
     var min = this.minCust;
     var max = this.maxCust;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  cookiesPerHr: function() {
+    var customers = this.customersPerHr();
+
+    return `${customers} customers. ${customers * this.avgCookies} cookies`;
   }
 };
 
@@ -62,16 +88,17 @@ var lima = {
   maxCust: 16,
   avgCookies: 4.6,
 
-  customers: function() {
+  customersPerHr: function() {
     var min = this.minCust;
     var max = this.maxCust;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  cookiesPerHr: function() {
+    var customers = this.customersPerHr();
+
+    return `${customers} customers. ${customers * this.avgCookies} cookies`;
   }
 };
 
-console.log(seattle.customers());
-console.log(tokyo.customers());
-console.log(dubai.customers());
-console.log(paris.customers());
-console.log(lima.customers());
