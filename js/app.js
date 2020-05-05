@@ -16,11 +16,24 @@ var seattle = {
   cookiesPerHr: function() {
     var customers = this.customersPerHr();
 
-    return `${customers} customers. ${customers * this.avgCookies} cookies`;
+    return customers * this.avgCookies;
+  },
+
+  cookieTotal: function() {
+    var cookies = [];
+    var sum = 0;
+
+    for (var i = 0; i < 14; i++) {
+      var hourlyCookies = this.cookiesPerHr();
+      cookies.push(hourlyCookies);
+      sum += hourlyCookies;
+    }
+
+    cookies.push(sum);
+
+    return cookies;
   }
 };
-
-console.log(seattle.cookiesPerHr());
 
 var tokyo = {
 
@@ -38,7 +51,22 @@ var tokyo = {
   cookiesPerHr: function() {
     var customers = this.customersPerHr();
 
-    return `${customers} customers. ${customers * this.avgCookies} cookies`;
+    return customers * this.avgCookies;
+  },
+
+  cookieTotal: function() {
+    var cookies = [];
+    var sum = 0;
+
+    for (var i = 0; i < 14; i++) {
+      var hourlyCookies = this.cookiesPerHr();
+      cookies.push(hourlyCookies);
+      sum += hourlyCookies;
+    }
+
+    cookies.push(sum);
+
+    return cookies;
   }
 };
 
@@ -58,7 +86,22 @@ var dubai = {
   cookiesPerHr: function() {
     var customers = this.customersPerHr();
 
-    return `${customers} customers. ${customers * this.avgCookies} cookies`;
+    return customers * this.avgCookies;
+  },
+
+  cookieTotal: function() {
+    var cookies = [];
+    var sum = 0;
+
+    for (var i = 0; i < 14; i++) {
+      var hourlyCookies = this.cookiesPerHr();
+      cookies.push(hourlyCookies);
+      sum += hourlyCookies;
+    }
+
+    cookies.push(sum);
+
+    return cookies;
   }
 };
 
@@ -78,7 +121,22 @@ var paris = {
   cookiesPerHr: function() {
     var customers = this.customersPerHr();
 
-    return `${customers} customers. ${customers * this.avgCookies} cookies`;
+    return customers * this.avgCookies;
+  },
+
+  cookieTotal: function() {
+    var cookies = [];
+    var sum = 0;
+
+    for (var i = 0; i < 14; i++) {
+      var hourlyCookies = this.cookiesPerHr();
+      cookies.push(hourlyCookies);
+      sum += hourlyCookies;
+    }
+
+    cookies.push(sum);
+
+    return cookies;
   }
 };
 
@@ -98,7 +156,24 @@ var lima = {
   cookiesPerHr: function() {
     var customers = this.customersPerHr();
 
-    return `${customers} customers. ${customers * this.avgCookies} cookies`;
+    return customers * this.avgCookies;
+  },
+
+  cookieTotal: function() {
+    var cookies = [];
+    var sum = 0;
+
+    for (var i = 0; i < 14; i++) {
+      var hourlyCookies = this.cookiesPerHr();
+      cookies.push(hourlyCookies);
+      sum += hourlyCookies;
+    }
+
+    cookies.push(sum);
+
+    return cookies;
   }
 };
+
+console.log(lima.cookieTotal());
 
