@@ -1,5 +1,6 @@
 'use strict';
 
+// SEATTLE STORE
 var seattle = {
 
   minCust: 23,
@@ -50,6 +51,8 @@ var seattle = {
   }
 };
 
+
+// TOKYO STORE
 var tokyo = {
 
   minCust: 3,
@@ -100,6 +103,8 @@ var tokyo = {
   }
 };
 
+
+// DUBAI STORE
 var dubai = {
 
   minCust: 11,
@@ -149,6 +154,8 @@ var dubai = {
   }
 };
 
+
+// PARIS STORE
 var paris = {
 
   minCust: 20,
@@ -199,6 +206,8 @@ var paris = {
   }
 };
 
+
+// LIMA STORE
 var lima = {
 
   minCust: 2,
