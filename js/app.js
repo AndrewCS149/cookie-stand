@@ -5,7 +5,6 @@ var storeHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am',
   '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'
 ];
 
-
 var sumArr = []; // will hold the daily sales for all stores
 var hourlySales = []; // will hold hourly sales for all stores
 
@@ -18,14 +17,17 @@ function Store(storeName, minCust, maxCust, avgCookies) {
 
 // Prototype to calculate the total amount of cookies bought each hour
 Store.prototype.cookiesPerHr = function () {
-  var cookieArr = [];
+  // traffic rate refers to the hourly percentage of traffic flow
+  var trafficRate = [0.5, 0.75, 1.0, 0.6, 0.8, 1.0, 0.7, 0.4, 0.6, 0.9, 0.7, 0.5, 0.3, 0.4, 0.6];
 
   // calculate cookies consumed per hour by multiplying the 'avgCookies' by a
   // randomly generated number.
+  var cookieArr = [];
   for (var i = 0; i < storeHours.length; i++) {
+    var hourlyCookies = Math.ceil(custPerHr * this.avgCookies);
     var custPerHr = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-    cookieArr.push(Math.ceil(custPerHr * this.avgCookies));
-    hourlySales.push(Math.ceil(custPerHr * this.avgCookies));
+    cookieArr.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
+    hourlySales.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
   }
 
   return cookieArr;
@@ -37,6 +39,7 @@ Store.prototype.renderHrs = function () {
   var hRow = document.createElement('tr');
   var tableH = document.createElement('th');
 
+  // add a leading empty cell
   tableH.textContent = '';
   hRow.appendChild(tableH);
 
@@ -140,6 +143,7 @@ var dubai = new Store('Dubai', 11, 38, 3.7);
 var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
 
+// render to sales.html page
 Store.prototype.renderHrs();
 seattle.renderSales();
 tokyo.renderSales();
