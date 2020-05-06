@@ -14,9 +14,29 @@ h2 {
 }
 
 table {
-  margin: 50px;
+  /* margin: 50pxs; */
   background-color: salmon;
 }
+
+#tables {
+  width: fit-content;
+}
+
+#staff {
+  width: 84%;
+  margin: 0px auto 0px auto;
+}
+
+h2 {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px 0px;
+}
+
+#staff td {
+  width: 1em;
+}
+
 
 td,
 th {
@@ -24,7 +44,7 @@ th {
   padding: 7.5px;
 }
 
-td:first-child,
+#sales td:first-child,
 tr:first-child {
   background-color: cornflowerblue;
   color: white;

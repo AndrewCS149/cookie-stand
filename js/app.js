@@ -26,6 +26,7 @@ Store.prototype.cookiesPerHr = function () {
   for (var i = 0; i < storeHours.length; i++) {
     var hourlyCookies = Math.ceil(custPerHr * this.avgCookies);
     var custPerHr = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+
     cookieArr.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
     hourlySales.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
   }
@@ -35,55 +36,88 @@ Store.prototype.cookiesPerHr = function () {
 
 // Prototype to display the store hours as the header row
 Store.prototype.renderHrs = function () {
-  var tBody = document.getElementById('salesTable');
-  var hRow = document.createElement('tr');
-  var tableH = document.createElement('th');
+  // gather info for sales table
+  var salesTable = document.getElementById('salesTable');
+  var salesRow = document.createElement('tr');
+  var salesData = document.createElement('th');
+
+  // gather info for staff table
+  var staffTable = document.getElementById('staffTable');
+  var staffRow = document.createElement('tr');
+  var staffData = document.createElement('td');
 
   // add a leading empty cell
-  tableH.textContent = '';
-  hRow.appendChild(tableH);
+  salesData.textContent = '';
+  salesRow.appendChild(salesData);
 
   // add store hours in header row
   for (var i = 0; i < storeHours.length; i++) {
-    tableH = document.createElement('th');
-    tableH.textContent = storeHours[i];
-    hRow.appendChild(tableH);
+    // sales
+    salesData = document.createElement('th');
+    salesData.textContent = storeHours[i];
+    salesRow.appendChild(salesData);
+
+    // staff
+    staffData = document.createElement('td');
+    staffData.textContent = storeHours[i];
+    staffRow.appendChild(staffData);
   }
 
   // add 'Daily Total' header
-  tableH = document.createElement('th');
-  tableH.textContent = 'Daily Total:';
-  hRow.appendChild(tableH);
+  salesData = document.createElement('th');
+  salesData.textContent = 'Daily Total:';
+  salesRow.appendChild(salesData);
 
-  tBody.appendChild(hRow);
+  // append to tables
+  salesTable.appendChild(salesRow);
+  staffTable.appendChild(staffRow);
 };
 
-// Prototype to render the sales calculations to the page
+// Prototype to render the sales calculations and the staff needed 
+// to the sales.html page
 Store.prototype.renderSales = function () {
+  // gather info for sales table
   var cookies = this.cookiesPerHr();
-  var tBody = document.getElementById('salesTable');
-  var tRow = document.createElement('tr');
-  var tableD = document.createElement('td');
+  var salesTable = document.getElementById('salesTable');
+  var salesRow = document.createElement('tr');
+  var salesData = document.createElement('td');
 
-  tableD.textContent = this.storeName;
-  tRow.appendChild(tableD);
+  // gather info for staff table
+  var staffTable = document.getElementById('staffTable');
+  var staffRow = document.createElement('tr');
+  var staffData = document.createElement('td');
+
+  salesData.textContent = this.storeName;
+  salesRow.appendChild(salesData);
 
   // add hourly total to row and accumulate sum
+  // add staff needed to row
   var sum = 0;
   for (var i = 0; i < storeHours.length; i++) {
-    tableD = document.createElement('td');
-    tableD.textContent = (cookies[i]);
-    tRow.appendChild(tableD);
+    // sales
+    salesData = document.createElement('td');
+    salesData.textContent = (cookies[i]);
+    salesRow.appendChild(salesData);
     sum += cookies[i];
+
+    // staff
+    staffData = document.createElement('td');
+    staffData.textContent = Math.ceil((cookies[i]) / 20);
+    if (staffData.textContent < 2) {
+      staffData.textContent = 2;
+    }
+    staffRow.appendChild(staffData);
   }
 
   // add sum to last table data
   sumArr.push(sum);
-  tableD = document.createElement('td');
-  tableD.textContent = sum;
-  tRow.appendChild(tableD);
+  salesData = document.createElement('td');
+  salesData.textContent = sum;
+  salesRow.appendChild(salesData);
 
-  tBody.appendChild(tRow);
+  // append to tables
+  salesTable.appendChild(salesRow);
+  staffTable.appendChild(staffRow);
 };
 
 // Prototype to calculate and display the hourly sums as well as
