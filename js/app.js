@@ -47,9 +47,11 @@ Store.prototype.renderHrs = function () {
   var staffRow = document.createElement('tr');
   var staffData = document.createElement('td');
 
-  // add a leading empty cell
+  // add a leading empty cell to both tables
   salesData.textContent = '';
   salesRow.appendChild(salesData);
+  staffData.textContent = '';
+  staffRow.appendChild(staffData);
 
   // add store hours in header row
   for (var i = 0; i < storeHours.length; i++) {
@@ -90,6 +92,9 @@ Store.prototype.renderSales = function () {
 
   salesData.textContent = this.storeName;
   salesRow.appendChild(salesData);
+
+  staffData.textContent = this.storeName;
+  staffRow.appendChild(staffData);
 
   // add hourly total to row and accumulate sum
   // add staff needed to row
@@ -176,6 +181,8 @@ var tokyo = new Store('Tokyo', 3, 24, 1.2);
 var dubai = new Store('Dubai', 11, 38, 3.7);
 var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
+var rockford = new Store('Rockford', 2, 16, 4.6);
+var lexington = new Store('Lexington', 2, 16, 4.6);
 
 // render to sales.html page
 Store.prototype.renderHrs();
@@ -184,4 +191,6 @@ tokyo.renderSales();
 dubai.renderSales();
 paris.renderSales();
 lima.renderSales();
+rockford.renderSales();
+lexington.renderSales();
 Store.prototype.renderTotals();

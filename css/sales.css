@@ -24,7 +24,7 @@ table {
 
 #staff {
   width: 84%;
-  margin: 0px auto 0px auto;
+  margin: 0px;
 }
 
 h2 {
@@ -37,6 +37,9 @@ h2 {
   width: 1em;
 }
 
+td:first-child {
+  width: 75px
+}
 
 td,
 th {
@@ -48,7 +51,7 @@ tr:nth-child(even) {
   background-color: rgb(238, 175, 168);
 }
 
-#sales td:first-child,
+td:first-child,
 tr:first-child {
   background-color: cornflowerblue;
   color: white;
