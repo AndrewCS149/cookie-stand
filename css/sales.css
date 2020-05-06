@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Teko&display=swap');
+
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+div {
+  display: inline-block;
+}
+
+h2 {
+  text-align: center;
+}
+
+table {
+  /* margin: 50pxs; */
+  background-color: salmon;
+}
+
+#tables {
+  width: fit-content;
+}
+
+#staff {
+  width: 84%;
+  margin: 0px auto 0px auto;
+}
+
+h2 {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px 0px;
+}
+
+#staff td {
+  width: 1em;
+}
+
+
+td,
+th {
+  border: 4px solid white;
+  padding: 7.5px;
+}
+
+#sales td:first-child,
+tr:first-child {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+tr:nth-child(n+2):hover {
+  background-color: aquamarine;
+}
