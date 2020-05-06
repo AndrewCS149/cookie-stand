@@ -27,6 +27,7 @@ Store.prototype.cookiesPerHr = function () {
     var hourlyCookies = Math.ceil(custPerHr * this.avgCookies);
     var custPerHr = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 
+    // push values to arrays
     cookieArr.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
     hourlySales.push(Math.ceil(custPerHr * this.avgCookies * trafficRate[i]));
   }
@@ -73,7 +74,7 @@ Store.prototype.renderHrs = function () {
   staffTable.appendChild(staffRow);
 };
 
-// Prototype to render the sales calculations and the staff needed 
+// Prototype to render the sales calculations and the staff needed
 // to the sales.html page
 Store.prototype.renderSales = function () {
   // gather info for sales table
@@ -167,7 +168,6 @@ Store.prototype.renderTotals = function () {
   tableD.textContent = (totalSum);
   tRow.appendChild(tableD);
   tBody.appendChild(tRow);
-
 };
 
 // construct new Store object and test all prototypes

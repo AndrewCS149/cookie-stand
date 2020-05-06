@@ -44,6 +44,10 @@ th {
   padding: 7.5px;
 }
 
+tr:nth-child(even) {
+  background-color: rgb(238, 175, 168);
+}
+
 #sales td:first-child,
 tr:first-child {
   background-color: cornflowerblue;
