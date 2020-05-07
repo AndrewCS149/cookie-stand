@@ -14,8 +14,7 @@ h2 {
 }
 
 table {
-  /* margin: 50pxs; */
-  background-color: salmon;
+  background-color: rgb(44, 38, 38);
 }
 
 #tables {
@@ -28,7 +27,7 @@ table {
 }
 
 h2 {
-  background-color: cornflowerblue;
+  background-color: rgb(44, 38, 38);
   color: white;
   padding: 5px 0px;
 }
@@ -43,20 +42,21 @@ td:first-child {
 
 td,
 th {
-  border: 4px solid white;
+  border: 4px solid rgb(100, 93, 93);
   padding: 7.5px;
+  color: white;
 }
 
 tr:nth-child(even) {
-  background-color: rgb(238, 175, 168);
+  background-color: rgb(27, 22, 22);
 }
 
 td:first-child,
 tr:first-child {
-  background-color: cornflowerblue;
+  background-color: rgb(156, 71, 71);
   color: white;
 }
 
 tr:nth-child(n+2):hover {
-  background-color: aquamarine;
+  background-color: rgb(156, 71, 71);
 }
