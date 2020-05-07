@@ -29,5 +29,6 @@ tr:first-child {
 }
 
 tr:nth-child(n+2):hover {
-  background-color: rgb(156, 71, 71);
+  /* background-color: rgb(156, 71, 71); */
+  background-color: lightseagreen;
 }

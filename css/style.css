@@ -9,6 +9,11 @@ header {
   text-align: center;
 }
 
+header a {
+  text-decoration: none;
+  color: lightcoral
+}
+
 #title {
   width: fit-content;
   padding: 10px;
