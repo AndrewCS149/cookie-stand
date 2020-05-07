@@ -48,7 +48,8 @@ header img {
 main {
   border: 2px solid black;
   clear: both;
-  width: 80%;
+  width: 70vw;
+  max-width: 1500px;
   text-align: center;
   margin: auto;
   background-color: rgb(156, 71, 71);
@@ -62,7 +63,7 @@ section {
 }
 
 section div {
-  width: 45%;
+  width: 40%;
   margin: auto;
 }
 
@@ -84,7 +85,8 @@ section div {
 
 #section-1 div img {
   float: right;
-  margin: 20px;
+  margin-right: 7.5px;
+  text-align: center;
 }
 
 #section-2 div:last-child {
