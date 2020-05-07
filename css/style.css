@@ -9,8 +9,6 @@ header {
   text-align: center;
 }
 
-
-
 #title {
   width: fit-content;
   padding: 10px;
@@ -100,9 +98,17 @@ section div {
 }
 
 #section-3 {
-  /* width: 30%; */
   margin: 10% auto;
   height: fit-content;
+}
+
+#section-3 div:first-child {
+  width: 40%;
+}
+
+#locations li {
+  margin: 10px 0px;
+  text-align: left;
 }
 
 #section-3 div:first-child h2 {
@@ -119,13 +125,16 @@ section div {
   padding: 10px;
 }
 
+iframe {
+  border-radius: 7.5px;
+}
+
 #section-3 div {
   width: fit-content;
 }
 
 #section-3 div:last-child {
   margin: auto;
-  border: 2px solid black;
 }
 
 footer {
