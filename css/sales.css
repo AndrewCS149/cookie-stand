@@ -1,49 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Teko&display=swap');
-
-
-body {
-  font-family: 'Noto Sans SC', sans-serif;
+main {
+  width: 85vw;
+  height: 1400px;
 }
 
-div {
-  display: inline-block;
-}
-
-h2 {
-  text-align: center;
-}
+/* TABLES */
 
 table {
   background-color: rgb(44, 38, 38);
+  margin: 20px auto;
 }
 
-#tables {
-  width: fit-content;
-}
-
-#staff {
-  width: 84%;
-  margin: 0px;
-}
-
-h2 {
-  background-color: rgb(44, 38, 38);
-  color: white;
-  padding: 5px 0px;
-}
-
-#staff td {
-  width: 1em;
-}
-
-td:first-child {
-  width: 75px
+section {
+  display: inline-block;
 }
 
 td,
 th {
   border: 4px solid rgb(100, 93, 93);
-  padding: 7.5px;
+  padding: 7.5px 2px 7.5px 2px;
   color: white;
 }
 
@@ -58,5 +32,45 @@ tr:first-child {
 }
 
 tr:nth-child(n+2):hover {
-  background-color: rgb(156, 71, 71);
+  background-color: lightseagreen;
+}
+
+/* FORM */
+
+form {
+  height: fit-content;
+  width: fit-content;
+  margin: 0px auto 50px;
+  text-align: right;
+  background-color: rgb(44, 38, 38);
+  color: white;
+  border-radius: 7.5px;
+}
+
+form h3 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  padding: 10px 10px 0px 10px;
+}
+
+label:last-child {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input:last-child {
+  background-color: rgb(70, 61, 61);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:last-child:hover {
+  background-color: rgb(126, 118, 118);
 }

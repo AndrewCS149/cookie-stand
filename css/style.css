@@ -9,6 +9,11 @@ header {
   text-align: center;
 }
 
+header a {
+  text-decoration: none;
+  color: lightcoral
+}
+
 #title {
   width: fit-content;
   padding: 10px;
@@ -23,26 +28,13 @@ header {
 }
 
 body {
-  height: 1500px;
+  height: fit-content;
   background-color: rgb(44, 38, 38);
+  height: 1500px;
 }
 
 header img {
   border-radius: 7.5px;
-}
-
-
-#sales-link {
-  width: fit-content;
-  display: inline-block;
-  float: right;
-  margin: 65px 15%;
-}
-
-#sales-link a {
-  vertical-align: 100%;
-  text-decoration: none;
-  color: lightcoral;
 }
 
 main {
@@ -59,7 +51,6 @@ main {
 section {
   display: flex;
   margin: 50px 0px;
-
 }
 
 section div {
@@ -69,13 +60,16 @@ section div {
 
 #text-field-1,
 #section-2 div:last-child,
-#section-3 div:first-child {
+#section-3-div,
+#shirt {
   background-color: rgb(44, 38, 38);
   color: whitesmoke;
   padding: 10px;
   border-radius: 7.5px;
   border: 2px solid rgb(19, 19, 19);
   letter-spacing: 2.5px;
+  width: 40%;
+  height: fit-content;
 }
 
 #text-field-1 h2 {
@@ -108,6 +102,10 @@ section div {
   width: 40%;
 }
 
+#locations {
+  width: fit-content;
+}
+
 #locations li {
   margin: 10px 0px;
   text-align: left;
@@ -118,8 +116,10 @@ section div {
   padding: 10px;
 }
 
-#shirt {
-  border: 2px solid black;
+
+#shirt ol {
+  float: right;
+  padding: 10px;
 }
 
 #shirt h2 {
@@ -129,14 +129,6 @@ section div {
 
 iframe {
   border-radius: 7.5px;
-}
-
-#section-3 div {
-  width: fit-content;
-}
-
-#section-3 div:last-child {
-  margin: auto;
 }
 
 footer {
@@ -151,10 +143,9 @@ footer {
 }
 
 footer ol {
-  display: inline-block;
   list-style-type: none;
   float: left;
-  margin: 10px 0px 30px 15px;
+  margin: 40px 0px 30px 15px;
 
 }
 
@@ -170,8 +161,8 @@ footer ol li a {
   border-radius: 5px;
 }
 
-
 footer img {
   float: left;
-  margin: 27px 10px;
+  margin-top: 40px;
+  margin-left: 15px;
 }

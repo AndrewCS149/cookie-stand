@@ -5,12 +5,24 @@
   <meta charset="UTF-8">
   <title>Sales</title>
   <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/sales.css" type="text/css">
 
 </head>
 
 <body>
-  <header></header>
+  <header class="light-mode">
+    <div id="title" onclick="changeText()">
+      <img id="salmon" src="imgs/salmon.png" width="250" height="75" alt="salmon">
+      <h1>Pat's Salmon Cookies</h1>
+      <img id="salmon" src="imgs/chinook.jpg" width="250" height="75" alt="salmon">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
 
@@ -21,7 +33,6 @@
         </tbody>
       </table>
 
-      <h2>Staff Needed: 2 per 20 customers (minimum 2)</h2>
       <table id="staff">
         <tbody id="staffTable">
 
@@ -29,9 +40,35 @@
       </table>
     </section>
 
+    <form id="sales-form">
+      <h3>Enter New Sale or Update Existing Sale</h3>
+      <fieldset>
+        <label>Store Location:
+          <input class="input-field" type="text" required="required" maxlength="20" name="location">
+        </label>
+        <label>Minimum Customers Per Day:
+          <input class="input-field" type="number" required="required" name="minCust">
+        </label>
+        <label>Maximum Customers Per Day:
+          <input class="input-field" type="number" required="required" name="maxCust">
+        </label>
+        <label>Average Cookies Eaten Per Customer:
+          <input class="input-field" type="text" required="required" name="avgCookies">
+        </label>
+        <label>
+          <input type="submit" name="submit">
+        </label>
+      </fieldset>
+    </form>
   </main>
 
-  <footer></footer>
+  <footer>
+    <img src="imgs/fish.jpg" width="50px" height="50px" alt="fish swimming">
+    <ol>
+      <li>Email:</li>
+      <li>Phone: 867-5309</li>
+    </ol>
+  </footer>
 
   <script src="../js/sales.js"></script>
 </body>
