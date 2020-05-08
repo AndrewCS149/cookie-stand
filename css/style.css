@@ -28,8 +28,9 @@ header a {
 }
 
 body {
-  height: 1500px;
+  height: fit-content;
   background-color: rgb(44, 38, 38);
+  height: 1500px;
 }
 
 header img {

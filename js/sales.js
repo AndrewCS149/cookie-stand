@@ -7,12 +7,16 @@ var storeHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am',
 
 var sumArr = []; // will hold the daily sales for all stores
 var hourlySales = []; // will hold hourly sales for all stores
+var locations = [];
+
 
 function Store(storeName, minCust, maxCust, avgCookies) {
   this.storeName = storeName;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookies = avgCookies;
+
+  locations.push(this.storeName);
 }
 
 // Prototype to calculate the total amount of cookies bought each hour
@@ -183,6 +187,29 @@ var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
 var rockford = new Store('Rockford', 2, 16, 4.6);
 var lexington = new Store('Lexington', 2, 16, 4.6);
+
+var salesForm = document.getElementById('sales-form');
+
+function salesFormSubmit(event) {
+  event.preventDefault();
+
+  var location = event.target.location.value;
+  var minCust = Number(event.target.minCust.value);
+  var maxCust = Number(event.target.maxCust.value);
+  var avgCookies = Number(event.target.avgCookies.value);
+
+  location = new Store(location, minCust, maxCust, avgCookies);
+
+  // delete totals row before rendering again
+  var salesRow = document.getElementById('salesTable');
+  salesRow.removeChild(salesRow.lastChild);
+
+  // re-render the table
+  location.renderSales();
+  Store.prototype.renderTotals();
+}
+
+salesForm.addEventListener('submit', salesFormSubmit);
 
 // render to sales.html page
 Store.prototype.renderHrs();

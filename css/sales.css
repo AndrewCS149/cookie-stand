@@ -1,10 +1,11 @@
 main {
   width: 85vw;
+  height: 1400px;
 }
 
 table {
   background-color: rgb(44, 38, 38);
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 section {
