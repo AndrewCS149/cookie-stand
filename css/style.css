@@ -60,13 +60,16 @@ section div {
 
 #text-field-1,
 #section-2 div:last-child,
-#section-3 div:first-child {
+#section-3-div,
+#shirt {
   background-color: rgb(44, 38, 38);
   color: whitesmoke;
   padding: 10px;
   border-radius: 7.5px;
   border: 2px solid rgb(19, 19, 19);
   letter-spacing: 2.5px;
+  width: 40%;
+  height: fit-content;
 }
 
 #text-field-1 h2 {
@@ -99,6 +102,10 @@ section div {
   width: 40%;
 }
 
+#locations {
+  width: fit-content;
+}
+
 #locations li {
   margin: 10px 0px;
   text-align: left;
@@ -109,8 +116,10 @@ section div {
   padding: 10px;
 }
 
-#shirt {
-  border: 2px solid black;
+
+#shirt ol {
+  float: right;
+  padding: 10px;
 }
 
 #shirt h2 {
@@ -120,14 +129,6 @@ section div {
 
 iframe {
   border-radius: 7.5px;
-}
-
-#section-3 div {
-  width: fit-content;
-}
-
-#section-3 div:last-child {
-  margin: auto;
 }
 
 footer {
