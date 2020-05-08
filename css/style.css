@@ -166,3 +166,16 @@ footer img {
   margin-top: 40px;
   margin-left: 15px;
 }
+
+footer button {
+  padding: 10px;
+  float: right;
+  margin: 35px 10px;
+  background-color: rgb(44, 38, 38);
+  color: white;
+  border: none;
+}
+
+footer button:hover {
+  background-color: rgb(126, 118, 118);
+}

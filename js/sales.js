@@ -180,7 +180,7 @@ Store.prototype.renderTotals = function () {
   tBody.appendChild(tRow);
 };
 
-// event handler for submit form 
+// event handler for submit form
 function salesFormSubmit(event) {
   event.preventDefault();
 
@@ -213,6 +213,26 @@ function salesFormSubmit(event) {
 }
 
 salesForm.addEventListener('submit', salesFormSubmit);
+
+// LIGHT MODE & DARK MODE FUNCTIONS
+function lightMode() {
+  document.body.style.backgroundColor = 'white';
+}
+
+function darkMode() {
+  document.body.style.backgroundColor = 'rgb(44, 38, 38)';
+}
+
+
+
+
+
+// function darkMode() {
+//   document.body.style.backgroundColor = 'black';
+//   document.body.style.color = 'white';
+// }
+
+
 
 // construct new Store object and test all prototypes
 var seattle = new Store('seattle', 23, 65, 6.3);
