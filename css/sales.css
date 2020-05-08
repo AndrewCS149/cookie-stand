@@ -64,4 +64,9 @@ input:last-child {
   color: white;
   border: none;
   padding: 5px;
+  border-radius: 5px;
+}
+
+input:last-child:hover {
+  background-color: rgb(126, 118, 118);
 }
