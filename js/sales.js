@@ -5,6 +5,7 @@ var storeHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am',
   '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'
 ];
 
+var salesForm = document.getElementById('sales-form');
 var sumArr = []; // will hold the daily sales for all stores
 var hourlySales = []; // will hold hourly sales for all stores
 var locations = [];
@@ -179,17 +180,7 @@ Store.prototype.renderTotals = function () {
   tBody.appendChild(tRow);
 };
 
-// construct new Store object and test all prototypes
-var seattle = new Store('Seattle', 23, 65, 6.3);
-var tokyo = new Store('Tokyo', 3, 24, 1.2);
-var dubai = new Store('Dubai', 11, 38, 3.7);
-var paris = new Store('Paris', 20, 38, 2.3);
-var lima = new Store('Lima', 2, 16, 4.6);
-var rockford = new Store('Rockford', 2, 16, 4.6);
-var lexington = new Store('Lexington', 2, 16, 4.6);
-
-var salesForm = document.getElementById('sales-form');
-
+// event handler for submit form 
 function salesFormSubmit(event) {
   event.preventDefault();
 
@@ -198,11 +189,23 @@ function salesFormSubmit(event) {
   var maxCust = Number(event.target.maxCust.value);
   var avgCookies = Number(event.target.avgCookies.value);
 
-  location = new Store(location, minCust, maxCust, avgCookies);
-
   // delete totals row before rendering again
   var salesRow = document.getElementById('salesTable');
   salesRow.removeChild(salesRow.lastChild);
+
+  // for (var i = 0; i < locations.length; i++) {
+  //   if (location === locations[i]) {
+  //     locations[i] = new Store(location, minCust, maxCust, avgCookies);
+  //     locations[i].renderSales();
+  //     break;
+  //   } else {
+  //     location = new Store(location, minCust, maxCust, avgCookies);
+  //     location.renderSales();
+  //   }
+  // }
+
+  // create new object instance
+  location = new Store(location, minCust, maxCust, avgCookies);
 
   // re-render the table
   location.renderSales();
@@ -210,6 +213,15 @@ function salesFormSubmit(event) {
 }
 
 salesForm.addEventListener('submit', salesFormSubmit);
+
+// construct new Store object and test all prototypes
+var seattle = new Store('seattle', 23, 65, 6.3);
+var tokyo = new Store('tokyo', 3, 24, 1.2);
+var dubai = new Store('dubai', 11, 38, 3.7);
+var paris = new Store('paris', 20, 38, 2.3);
+var lima = new Store('lima', 2, 16, 4.6);
+var rockford = new Store('rockford', 2, 16, 4.6);
+var lexington = new Store('lexington', 2, 16, 4.6);
 
 // render to sales.html page
 Store.prototype.renderHrs();

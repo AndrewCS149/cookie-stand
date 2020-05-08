@@ -3,6 +3,8 @@ main {
   height: 1400px;
 }
 
+/* TABLES */
+
 table {
   background-color: rgb(44, 38, 38);
   margin: 20px auto;
@@ -32,6 +34,8 @@ tr:first-child {
 tr:nth-child(n+2):hover {
   background-color: lightseagreen;
 }
+
+/* FORM */
 
 form {
   height: fit-content;
