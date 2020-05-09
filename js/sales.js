@@ -193,17 +193,6 @@ function salesFormSubmit(event) {
   var salesRow = document.getElementById('salesTable');
   salesRow.removeChild(salesRow.lastChild);
 
-  // for (var i = 0; i < locations.length; i++) {
-  //   if (location === locations[i]) {
-  //     locations[i] = new Store(location, minCust, maxCust, avgCookies);
-  //     locations[i].renderSales();
-  //     break;
-  //   } else {
-  //     location = new Store(location, minCust, maxCust, avgCookies);
-  //     location.renderSales();
-  //   }
-  // }
-
   // create new object instance
   location = new Store(location, minCust, maxCust, avgCookies);
 
@@ -214,25 +203,18 @@ function salesFormSubmit(event) {
 
 salesForm.addEventListener('submit', salesFormSubmit);
 
+
 // LIGHT MODE & DARK MODE FUNCTIONS
 function lightMode() {
   document.body.style.backgroundColor = 'white';
+  document.getElementById('section-1').style.backgroundColor = 'white';
+
 }
 
 function darkMode() {
   document.body.style.backgroundColor = 'rgb(44, 38, 38)';
+  document.getElementById('section-1').style.backgroundColor = 'rgb(44, 38, 38)';
 }
-
-
-
-
-
-// function darkMode() {
-//   document.body.style.backgroundColor = 'black';
-//   document.body.style.color = 'white';
-// }
-
-
 
 // construct new Store object and test all prototypes
 var seattle = new Store('seattle', 23, 65, 6.3);

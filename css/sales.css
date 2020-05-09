@@ -45,6 +45,7 @@ form {
   background-color: rgb(44, 38, 38);
   color: white;
   border-radius: 7.5px;
+  border: 2px solid black;
 }
 
 form h3 {
