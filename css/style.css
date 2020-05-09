@@ -48,6 +48,7 @@ main {
   text-align: center;
   margin: auto;
   font-family: 'Noto Sans SC', sans-serif;
+  color: azure;
 }
 
 section {
@@ -163,7 +164,7 @@ footer {
 footer ol {
   list-style-type: none;
   float: left;
-  margin: 40px 0px 30px 15px;
+  margin: 30px 0px 30px 15px;
 
 }
 
